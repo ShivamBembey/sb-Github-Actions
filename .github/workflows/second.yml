@@ -1,0 +1,14 @@
+name: myworkflow
+
+on: 
+  push:
+    branches: [ "main" ]
+
+jobs:
+  firstjob:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run a multi-line script
+        run: echo This is from VS code.
